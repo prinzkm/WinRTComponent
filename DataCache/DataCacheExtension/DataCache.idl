@@ -1,0 +1,19 @@
+namespace Extension
+{
+    interface IDataCache;
+
+    [uuid(0d585932-fbc4-4b0a-90b5-ccf34aefd4c5)]
+    [version(1.0)]
+    interface IDataCache
+    {
+        [propget] HRESULT Value([out, retval] HSTRING* value);
+        [propput] HRESULT Value([in] HSTRING value);
+    }
+
+        [version(1.0)]
+        [activatable(1.0)]
+        runtimeclass DataCache
+    {
+        [default] interface IDataCache;
+    }
+}
